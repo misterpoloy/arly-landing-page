@@ -143,7 +143,7 @@ img {
 @media (max-width: 991px){
  .section {
     padding: 70px 0;
-  } 
+  }
 }
 @media (max-width: 767px){
  .section {
@@ -1012,6 +1012,11 @@ img {
   letter-spacing: 0.5px;
   margin: 0;
 }
+@media (max-width: 991px){
+   .home-banner-02 p {
+     font-size: 14px !important;
+   }
+ }
 
 .home-banner-02 .bg-effect {
   position: absolute;
@@ -1023,7 +1028,7 @@ img {
 
 @media(max-width: 991px) {
     .home-banner-02 h1 {
-      font-size: 30px;
+      font-size: 26px;
     }
 }
 @media(min-width: 992px) {
@@ -2894,7 +2899,7 @@ img {
   .md-m-5px-t  {margin-top:5px}
   .md-m-10px-t {margin-top:10px}
   .md-m-15px-t {margin-top:15px}
-  .md-m-20px-t {margin-top:20px}
+  .md-m-20px-t {margin-top:80px}
   .md-m-25px-t {margin-top:25px}
   .md-m-30px-t {margin-top:30px}
   .md-m-35px-t {margin-top:35px}
