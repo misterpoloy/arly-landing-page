@@ -588,7 +588,7 @@ img {
 
 @media (max-width: 767px) {
   .store-btn {
-    padding: 20px;\
+    padding: 20px;
   }
   .store-btn i {
     position: relative;
@@ -729,7 +729,7 @@ img {
   .header-nav .navbar-nav > li:hover .sub-menu {
     opacity: 1;
     pointer-events: auto;
-    top: 100%;26px
+    top: 100%;
   }
   .header-nav-light.header-nav .navbar-nav > li .sub-menu-toggle {
     color: #222;
@@ -737,7 +737,7 @@ img {
 }
 
 .header-nav .navbar-nav > li .sub-menu li > a {
-  color: #333;26px
+  color: #333;
   font-size: 13px;
   display: block;
   padding: 5px 20px 5px 20px;
@@ -1184,10 +1184,10 @@ img {
     z-index: -1;
 }
 
-.feature-box-01 {32px
-  display: block;32px
-  background: #F932px
-  box-shadow: 0 232px
+.feature-box-01 {
+  display: block;
+  /* background: #F9; */
+  box-shadow: 0 2;
   border-radius: 5px;
   padding: 40px 28px;
   text-align: center;
