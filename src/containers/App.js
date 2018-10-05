@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 // components
-import Navigation from '../components/Header/Header';
+import Navigation from '../components/Navigation/Navigation';
 import Main from '../components/Main/Main';
 
 class App extends Component {
