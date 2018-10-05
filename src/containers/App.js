@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 
 // components
-import Header from '../components/Header/Header';
+import Navigation from '../components/Header/Header';
 import Main from '../components/Main/Main';
 
 class App extends Component {
@@ -24,7 +24,7 @@ class App extends Component {
 
         return (
             <div className="App">
-                <Header />
+                <Navigation />
                 <Main />
             </div>
         );
