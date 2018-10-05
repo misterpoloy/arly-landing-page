@@ -1,12 +1,16 @@
 import React, { Component } from 'react';
 
+// components
+import Header from '../components/Header/Header';
+import Main from '../components/Main/Main';
+
 class App extends Component {
     state = {
         loading: true
     };
     
     componentDidMount() {
-        setTimeout( () => this.setState( { loading: false } ), 1500);
+        setTimeout( () => this.setState( { loading: false } ), 1);
     }
 
     render() {
@@ -20,7 +24,8 @@ class App extends Component {
 
         return (
             <div className="App">
-                Arly Stores Page with React
+                <Header />
+                <Main />
             </div>
         );
     }
