@@ -1,0 +1,15 @@
+{
+    "parser": "babel-eslint",
+    "extends": [
+        "google",
+        "eslint:recommended",
+        "plugin:react/recommended"
+    ],
+    "rules": {
+        "no-console": 0
+    },
+    "env": {
+        "jest": true,
+        "browser": true
+    }
+}
