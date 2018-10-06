@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import SocialNetworks from '../../containers/SocialNetworks/SocialNetworks';
+
 import startupSchoolLogo from '../../assets/img/startupschool.png';
 
 class Contact extends Component {
@@ -8,24 +10,7 @@ class Contact extends Component {
 
         this.state = {
             email: 'hello@arlystores.com',
-            address: 'Guatemala City, Zone 10.',
-            social: [
-                {
-                    name: 'Facebook',
-                    link: '#',
-                    icon: 'fab fa-facebook-f'
-                },
-                {
-                    name: 'Twitter',
-                    link: '#',
-                    icon: 'fab fa-twitter'
-                },
-                {
-                    name: 'Instagram',
-                    link: '#',
-                    icon: 'fab fa-instagram'
-                },
-            ]
+            address: 'Guatemala City, Zone 10.'
         }
     }
 
@@ -46,9 +31,7 @@ class Contact extends Component {
                             <label>Address</label>
                             <span>{this.state.address}</span>
                         </div>
-                        <ul class="social-icons">
-                            {socialNetworks}
-                        </ul>
+                        <SocialNetworks />
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-6">
