@@ -1,7 +1,7 @@
 import React from 'react';
 
 // images
-import logo from '../../assets/img/arly_logo_white.png';
+import logo from '../../assets/img/logos/arly_logo_white.png';
 
 const navigation = () => {
     return (
