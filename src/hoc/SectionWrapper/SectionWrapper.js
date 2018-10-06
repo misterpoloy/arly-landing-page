@@ -2,6 +2,7 @@ import React from 'react';
 
 const sectionWrapper = (props) => {
     const sectionClass = "section " + props.sectionInfo.bgColor;
+    const sectionIconClass = "fas " + props.sectionInfo.sectionIcon;
     const innerRowClass = props.sectionInfo.centerElements ? "row align-items-center" : "row";
     const sectionMedia = require('../../assets/img/' + props.sectionInfo.media);
     const inverse = props.sectionInfo.orientation === 'left' ? '' : 'order-md-2';
@@ -13,7 +14,12 @@ const sectionWrapper = (props) => {
             <div className="container">
                 <div className={innerRowClass}>
                     <div className={contentSideClass}>
-                        <div className="feature-box-03">
+                        <div className={props.sectionInfo.featureBox}>
+                            {props.sectionInfo.sectionIcon !== '' ? (
+                                <div class="icon">
+                                    <i class={sectionIconClass}></i>
+                                </div>
+                            ) : null}
                             <h4 className="font-alt">{props.sectionInfo.title}</h4>
                             {props.sectionInfo.description !== '' ? (
                                 <p>
@@ -31,6 +37,14 @@ const sectionWrapper = (props) => {
                         <img src={sectionMedia} title={props.sectionInfo.mediaTitle} alt={props.sectionInfo.mediaTitle} />
                     </div>
                 </div>
+                {props.sectionInfo.sectionFooter !== '' ? (
+                    <div className="row">
+                        <div className="col-md-12 text-center">
+                            <br /><br />
+                            <h4 className="font-alt">{props.sectionInfo.sectionFooter}</h4>
+                        </div>
+                    </div>
+                ) : null}
             </div>
         </section>
     )
