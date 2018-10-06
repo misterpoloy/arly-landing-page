@@ -13,10 +13,10 @@ const sectionWrapper = (props) => {
         <section id={props.id} className={sectionClass}>
             <div className="container">
                 {props.sectionInfo.mainTitle !== '' ? (
-                    <div class="row justify-content-center m-20px-b sm-m-5px-b">
-                        <div class="col-12 col-md-10 col-lg-7">
-                            <div class="section-title text-center">
-                                <h2 class="font-alt">{props.sectionInfo.mainTitle}</h2>
+                    <div className="row justify-content-center m-20px-b sm-m-5px-b">
+                        <div className="col-12 col-md-10 col-lg-7">
+                            <div className="section-title text-center">
+                                <h2 className="font-alt">{props.sectionInfo.mainTitle}</h2>
                             </div>
                         </div>
                     </div>
@@ -26,11 +26,11 @@ const sectionWrapper = (props) => {
                     <div className={contentSideClass}>
                         <div className={props.sectionInfo.featureBox}>
                             {props.sectionInfo.sectionIcon !== '' ? (
-                                <div class="icon">
+                                <div className="icon">
                                     {props.sectionInfo.singleTextIcon !== "" ? (
                                         props.sectionInfo.singleTextIcon
                                     ) : (
-                                        <i class={sectionIconClass}></i>
+                                        <i className={sectionIconClass}></i>
                                     )}
                                 </div>
                             ) : null}

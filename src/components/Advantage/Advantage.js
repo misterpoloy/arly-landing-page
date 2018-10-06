@@ -5,7 +5,7 @@ const advantage = (props) => {
 
     return (
         <li>
-            <i class="ti-control-forward"></i><h5 class="features-bullet">{props.advantageInfo.title}</h5>
+            <i className="ti-control-forward"></i><h5 className="features-bullet">{props.advantageInfo.title}</h5>
             <p>{props.advantageInfo.description}</p>
             {props.advantageInfo.image !== '' ? (
                 <img src={imageUrl} width="200px" />

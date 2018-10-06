@@ -9,13 +9,13 @@ class Platform extends Component {
         if (this.props.platformInfo.available) {
             return (
                 <li>
-                    <i class="ti-control-forward"></i> {this.props.platformInfo.platformName}
+                    <i className="ti-control-forward"></i> {this.props.platformInfo.platformName}
                 </li>
             );
         } else if ( this.props.platformInfo.willBe ) {
             return (
                 <li>
-                    <i class="ti-control-forward"></i> {this.props.platformInfo.platformName} (Comming soon)
+                    <i className="ti-control-forward"></i> {this.props.platformInfo.platformName} (Comming soon)
                 </li>
             );
         }
