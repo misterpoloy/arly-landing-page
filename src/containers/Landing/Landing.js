@@ -4,6 +4,7 @@ import React, { Component } from 'react';
 import Navigation from '../../components/Navigation/Navigation';
 import Header from '../../components/Header/Header';
 import Main from '../../hoc/Main/Main';
+import Footer from '../../components/Footer/Footer';
 
 // pages imports
 import Home from './Home/Home';
@@ -31,6 +32,7 @@ class Landing extends Component {
                     <Header isHome={true} headerInfo={this.state.headerInfo} />
                     <Home />
                 </Main>
+                <Footer />
             </div>
         )
     }
