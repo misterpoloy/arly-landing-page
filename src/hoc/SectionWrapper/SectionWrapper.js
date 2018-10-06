@@ -12,12 +12,26 @@ const sectionWrapper = (props) => {
     return (
         <section id={props.id} className={sectionClass}>
             <div className="container">
+                {props.sectionInfo.mainTitle !== '' ? (
+                    <div class="row justify-content-center m-20px-b sm-m-5px-b">
+                        <div class="col-12 col-md-10 col-lg-7">
+                            <div class="section-title text-center">
+                                <h2 class="font-alt">{props.sectionInfo.mainTitle}</h2>
+                            </div>
+                        </div>
+                    </div>
+                ) : null}
+
                 <div className={innerRowClass}>
                     <div className={contentSideClass}>
                         <div className={props.sectionInfo.featureBox}>
                             {props.sectionInfo.sectionIcon !== '' ? (
                                 <div class="icon">
-                                    <i class={sectionIconClass}></i>
+                                    {props.sectionInfo.singleTextIcon !== "" ? (
+                                        props.sectionInfo.singleTextIcon
+                                    ) : (
+                                        <i class={sectionIconClass}></i>
+                                    )}
                                 </div>
                             ) : null}
                             <h4 className="font-alt">{props.sectionInfo.title}</h4>
@@ -28,9 +42,13 @@ const sectionWrapper = (props) => {
                                     <strong>{props.sectionInfo.descriptionHighlighted}</strong>
                                 </p>
                             ) : null }
-                            <div className="row">
-                                {props.children}
-                            </div>
+                            {props.contentWithoutContainer ? (
+                                props.children
+                            ) : (
+                                <div className="row">
+                                    {props.children}
+                                </div>
+                            )}
                         </div>
                     </div>
                     <div className={mediaSideClass}>
