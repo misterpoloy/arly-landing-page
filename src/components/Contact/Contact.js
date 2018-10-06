@@ -15,10 +15,6 @@ class Contact extends Component {
     }
 
     render() {
-        const socialNetworks = this.state.social.map((network, index) => {
-            return <li><a class={network.name} href={network.link}><i class={network.icon}></i></a></li>
-        })
-
         return (
             <div class="row justify-content-center">
                 <div class="col-md-6 col-lg-4">
