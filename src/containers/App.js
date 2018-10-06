@@ -5,9 +5,11 @@ import Navigation from '../components/Navigation/Navigation';
 import Header from '../components/Header/Header';
 import Main from '../hoc/Main/Main';
 import SectionWrapper from '../hoc/SectionWrapper/SectionWrapper';
+import SingleSectionWrapper from '../hoc/SingleSectionWrapper/SingleSectionWrapper';
 import Feature from '../components/Feature/Feature';
 import Advantage from '../components/Advantage/Advantage';
 import Platforms from '../containers/Platforms/Platforms';
+import Price from '../components/Price/Price';
 
 class App extends Component {
     state = {
@@ -177,7 +179,70 @@ class App extends Component {
                 featureBox: "feature-box-04",
                 sectionFooter: ""
             },
-        ]
+        ],
+        pricingSection: {
+            title: "Limited Availability",
+            description: "",
+            bgColor: "",
+            centerElements: true,
+            border: true,
+            sectionFooter: ""
+        },
+        pricing: [
+            {
+                plan: 'PERSONAL',
+                price: '50.00',
+                currency: '$',
+                subscription: 'Per Month',
+                spacesNumber: '38',
+                spacesDescription: 'Spaces available',
+                chanelsNumber: '1',
+                featuresNumber: '2',
+                dailyInteractions: '200',
+                buttonLink: '#',
+                buttonText: 'START NOW',
+                offerAmmount: '10%',
+                offerDetails: 'off on anual payment'
+            },
+            {
+                plan: 'BUSINESS',
+                price: '150.00',
+                currency: '$',
+                subscription: 'Per Month',
+                spacesNumber: '38',
+                spacesDescription: 'Spaces available',
+                chanelsNumber: '2',
+                featuresNumber: '3',
+                dailyInteractions: '500',
+                buttonLink: '#',
+                buttonText: 'START NOW',
+                offerAmmount: '15%',
+                offerDetails: 'off on anual payment'
+            },
+            {
+                plan: 'ENTERPRISE',
+                price: '200.00',
+                currency: '$',
+                subscription: 'Per Month',
+                spacesNumber: '38',
+                spacesDescription: 'Spaces available',
+                chanelsNumber: '5',
+                featuresNumber: 'All the ',
+                dailyInteractions: '1000',
+                buttonLink: '#',
+                buttonText: 'START NOW',
+                offerAmmount: '25%',
+                offerDetails: 'off on anual payment'
+            },
+        ],
+        contactSection: {
+            title: "Contact",
+            description: "",
+            bgColor: "gray-bg",
+            centerElements: true,
+            border: false,
+            sectionFooter: ""
+        },
     };
     
     componentDidMount() {
@@ -206,6 +271,7 @@ class App extends Component {
         // get the steps sections in components
         const steps = this.state.stepsSections.map((section, index) => {
             return <SectionWrapper 
+                        id="howto"
                         key={index} 
                         sectionInfo={section}
                         contentWithoutContainer={true}
@@ -216,6 +282,25 @@ class App extends Component {
                         </ul>
                     ) : null}
                     </SectionWrapper>
+        })
+
+        // get pricing
+        const prices = this.state.pricing.map((price, index) => {
+            return <Price 
+                        plan={price.plan}
+                        price={price.price}
+                        currency={price.currency}
+                        subscription={price.subscription}
+                        spacesNumber={price.spacesNumber}
+                        spacesDescription={price.spacesDescription}
+                        chanelsNumber={price.chanelsNumber}
+                        featuresNumber={price.featuresNumber}
+                        dailyInteractions={price.dailyInteractions}
+                        buttonLink={price.buttonLink}
+                        buttonText={price.buttonText}
+                        offerAmmount={price.offerAmmount}
+                        offerDetails={price.offerDetails}                    
+                    />
         })
 
         return (
@@ -237,6 +322,15 @@ class App extends Component {
                         </ul>
                     </SectionWrapper>
                     {steps}
+                    <SingleSectionWrapper 
+                        id="price"
+                        sectionInfo={this.state.pricingSection}>
+                        {prices}
+                    </SingleSectionWrapper>
+                    <SingleSectionWrapper
+                        id="contact"
+                        sectionInfo={this.state.contactSection}>
+                    </SingleSectionWrapper>
                 </Main>
             </div>
         );
