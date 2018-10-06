@@ -6,6 +6,7 @@ import Header from '../components/Header/Header';
 import Main from '../hoc/Main/Main';
 import SectionWrapper from '../hoc/SectionWrapper/SectionWrapper';
 import Feature from '../components/Feature/Feature';
+import Advantage from '../components/Advantage/Advantage';
 
 class App extends Component {
     state = {
@@ -27,7 +28,10 @@ class App extends Component {
             mediaSmall: false,
             bgColor: "gray-bg",
             orientation: "left",
-            centerElements: true
+            centerElements: true,
+            sectionIcon: "",
+            featureBox: "feature-box-03",
+            sectionFooter: ""
         },
         featuresSection: {
             title: "What Can Arly Do?",
@@ -38,7 +42,10 @@ class App extends Component {
             mediaSmall: true,
             bgColor: "gray-bg",
             orientation: "right",
-            centerElements: false
+            centerElements: false,
+            sectionIcon: "",
+            featureBox: "feature-box-03",
+            sectionFooter: ""
         },
         features: [
             {
@@ -77,6 +84,42 @@ class App extends Component {
                 featureIcon: 'ti-write',
                 featureExample: 'Do you have the red iphone X?'
             },
+        ],
+        advantagesSection: {
+            title: "Why is Arly better?",
+            description: "",
+            descriptionHighlighted: "",
+            media: "banners/banner2.png",
+            mediaTitle: "",
+            mediaSmall: false,
+            bgColor: "",
+            orientation: "right",
+            centerElements: true,
+            sectionIcon: 'fa-trophy',
+            featureBox: "feature-box-04",
+            sectionFooter: "And yet this is only phase 1 of 3..."
+        },
+        advantages: [
+            {
+                title: "Natural language processing",
+                description: "Arly is not only a form with chat interface, we know that human language is very complex and there are different ways of transmitting an intension. Arly is able to handle a fluent conversation.",
+                image: ""
+            },
+            {
+                title: "Personality and unique branding",
+                description: "Arly can adapt to your branding, unique and personalized phrases to transmit a character and generate empathy can be done from the control area so that each user has a unique experience.",
+                image: ""
+            },
+            {
+                title: "Speed in implementation",
+                description: "A bot can take months of development, in Arly you have it in less than 1 hour. For real.",
+                image: ""
+            },
+            {
+                title: "Security and robust infrastructure",
+                description: "Are you worried about safety? Arly uses Microsoft's data centers and security services with 99.99% dedicated servers, security and point technology on multiple continents.",
+                image: "PoweredByAzure.png"
+            },
         ]
     };
     
@@ -93,8 +136,14 @@ class App extends Component {
             );
         }
 
+        // get the features in components
         const features = this.state.features.map((feature, index) => {
             return <Feature key={index} featureInfo={feature}/>
+        })
+
+        // get the advantages in components
+        const advantages = this.state.advantages.map((advantage, index) => {
+            return <Advantage key={index} advantageInfo={advantage}/>
         })
 
         return (
@@ -108,6 +157,14 @@ class App extends Component {
                         sectionInfo={this.state.featuresSection}>
                         {features}
                     </SectionWrapper>
+                    <SectionWrapper 
+                        id="advantages" 
+                        sectionInfo={this.state.advantagesSection}>
+                        <ul class="fb4-list-type m-30px-b m-20px-t p-0px">
+                            {advantages}
+                        </ul>
+                    </SectionWrapper>
+                    
                 </Main>
             </div>
         );
