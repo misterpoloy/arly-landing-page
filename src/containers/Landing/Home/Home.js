@@ -9,6 +9,7 @@ import SingleSectionWrapper from '../../../hoc/SingleSectionWrapper/SingleSectio
 import Feature from '../../../components/Feature/Feature';
 import Advantage from '../../../components/Advantage/Advantage';
 import Price from '../../../components/Price/Price';
+import Contact from '../../../components/Contact/Contact';
 
 class Home extends Component {
     constructor(props) {
@@ -230,12 +231,13 @@ class Home extends Component {
                 },
             ],
             contactSection: {
-                title: "Contact",
+                title: "Contact Us",
                 description: "",
                 bgColor: "gray-bg",
                 centerElements: true,
                 border: false,
-                sectionFooter: ""
+                sectionFooter: "",
+                contentWithoutContainer: true
             },
         };
     }
@@ -311,6 +313,7 @@ class Home extends Component {
                 <SingleSectionWrapper
                     id="contact"
                     sectionInfo={this.state.contactSection}>
+                    <Contact />
                 </SingleSectionWrapper>
             </div>
         )
