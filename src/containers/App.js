@@ -7,6 +7,7 @@ import Main from '../hoc/Main/Main';
 import SectionWrapper from '../hoc/SectionWrapper/SectionWrapper';
 import Feature from '../components/Feature/Feature';
 import Advantage from '../components/Advantage/Advantage';
+import Platforms from '../containers/Platforms/Platforms';
 
 class App extends Component {
     state = {
@@ -20,6 +21,7 @@ class App extends Component {
             buttonText: 'Limited Availability'
         },
         chatbotSection: {
+            mainTitle: "",
             title: "What is a Chatbot?",
             description: "Imagine sending a text message to a number to order a piizza and have it delivered to you without even having to speak to a human; That’s what bots do. Specifically, a bot is an application that performs an automated task, such as activating an alarm, giving you the weather, or doing an online search. Siri and Cortana are bots, just as Microsoft Clippy was, remember?",
             descriptionHighlighted: "So, in summary, what is a bot? It is nothing more than a computer program with the ability to emulate a human conversation to achieve a concrete action.",
@@ -30,10 +32,12 @@ class App extends Component {
             orientation: "left",
             centerElements: true,
             sectionIcon: "",
+            singleTextIcon: "",
             featureBox: "feature-box-03",
             sectionFooter: ""
         },
         featuresSection: {
+            mainTitle: "",
             title: "What Can Arly Do?",
             description: "",
             descriptionHighlighted: "",
@@ -44,6 +48,7 @@ class App extends Component {
             orientation: "right",
             centerElements: false,
             sectionIcon: "",
+            singleTextIcon: "",
             featureBox: "feature-box-03",
             sectionFooter: ""
         },
@@ -86,6 +91,7 @@ class App extends Component {
             },
         ],
         advantagesSection: {
+            mainTitle: "",
             title: "Why is Arly better?",
             description: "",
             descriptionHighlighted: "",
@@ -96,6 +102,7 @@ class App extends Component {
             orientation: "right",
             centerElements: true,
             sectionIcon: 'fa-trophy',
+            singleTextIcon: "",
             featureBox: "feature-box-04",
             sectionFooter: "And yet this is only phase 1 of 3..."
         },
@@ -119,6 +126,56 @@ class App extends Component {
                 title: "Security and robust infrastructure",
                 description: "Are you worried about safety? Arly uses Microsoft's data centers and security services with 99.99% dedicated servers, security and point technology on multiple continents.",
                 image: "PoweredByAzure.png"
+            },
+        ],
+        stepsSections: [
+            {
+                mainTitle: "How Do I Start? 3 Steps",
+                title: "1. Give it a personality, provide questions/answers",
+                description: "Customize your bot from a greeting to the way it serves your customers, make your best customer service representative without training and in just a few minutes.",
+                descriptionHighlighted: "",
+                media: "banners/banner4.svg",
+                mediaTitle: "",
+                mediaSmall: false,
+                bgColor: "gray-bg",
+                orientation: "left",
+                centerElements: true,
+                sectionIcon: true,
+                singleTextIcon: "1",
+                featureBox: "feature-box-04",
+                sectionFooter: ""
+            },
+            {
+                mainTitle: "",
+                title: "2. Select the platforms where you want your bot (channels)",
+                description: "You can choose which of the channels are more efficient for your company and integrate Arly so that none of your customers is left without the right help.",
+                descriptionHighlighted: "",
+                media: "channels.png",
+                mediaTitle: "",
+                mediaSmall: false,
+                bgColor: "gray-bg",
+                orientation: "right",
+                centerElements: true,
+                sectionIcon: true,
+                singleTextIcon: "2",
+                featureBox: "feature-box-04",
+                sectionFooter: ""
+            },
+            {
+                mainTitle: "",
+                title: "3. Continuous improvement with Insights",
+                description: "Through a control panel you will have insights about the feelings of your clients. You can control the feedbacks and important points to have a continuous improvement in your customer service.",
+                descriptionHighlighted: "",
+                media: "banners/banner5.png",
+                mediaTitle: "",
+                mediaSmall: false,
+                bgColor: "gray-bg",
+                orientation: "left",
+                centerElements: true,
+                sectionIcon: true,
+                singleTextIcon: "3",
+                featureBox: "feature-box-04",
+                sectionFooter: ""
             },
         ]
     };
@@ -146,6 +203,21 @@ class App extends Component {
             return <Advantage key={index} advantageInfo={advantage}/>
         })
 
+        // get the steps sections in components
+        const steps = this.state.stepsSections.map((section, index) => {
+            return <SectionWrapper 
+                        key={index} 
+                        sectionInfo={section}
+                        contentWithoutContainer={true}
+                    >
+                    {index === 1 ? (
+                        <ul className="fb4-list-type m-40px-b m-20px-t p-0px">
+                            <Platforms />
+                        </ul>
+                    ) : null}
+                    </SectionWrapper>
+        })
+
         return (
             <div className="App">
                 <Navigation />
@@ -160,11 +232,11 @@ class App extends Component {
                     <SectionWrapper 
                         id="advantages" 
                         sectionInfo={this.state.advantagesSection}>
-                        <ul class="fb4-list-type m-30px-b m-20px-t p-0px">
+                        <ul className="fb4-list-type m-30px-b m-20px-t p-0px">
                             {advantages}
                         </ul>
                     </SectionWrapper>
-                    
+                    {steps}
                 </Main>
             </div>
         );
