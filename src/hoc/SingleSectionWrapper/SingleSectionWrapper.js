@@ -16,9 +16,13 @@ const singleSectionWrapper = (props) => {
                         </div>
                     </div>
                 </div>
-                <div className="row justify-content-cener">
-                    {props.children}
-                </div>
+                {props.sectionInfo.contentWithoutContainer ? (
+                    props.children
+                ) : (
+                    <div className="row justify-content-cener">
+                        {props.children}
+                    </div>
+                )}
             </div>
         </section>
     )
