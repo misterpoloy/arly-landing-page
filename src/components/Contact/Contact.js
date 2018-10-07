@@ -16,48 +16,48 @@ class Contact extends Component {
 
     render() {
         return (
-            <div class="row justify-content-center">
-                <div class="col-md-6 col-lg-4">
-                    <div class="contact-info theme-g-bg">
-                        <div class="ci-row">
+            <div className="row justify-content-center">
+                <div className="col-md-6 col-lg-4">
+                    <div className="contact-info theme-g-bg">
+                        <div className="ci-row">
                             <label>For General Enquiries</label>
                             <span>{this.state.email}</span>
                         </div>
-                        <div class="ci-row">
+                        <div className="ci-row">
                             <label>Address</label>
                             <span>{this.state.address}</span>
                         </div>
                         <SocialNetworks />
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-6">
-                    <div class="contact-form">
+                <div className="col-md-6 col-lg-6">
+                    <div className="contact-form">
                         <h2>Get in touch</h2>
-                        <form class="contactform" method="post" action="static/php/process-form.php">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <input id="name" name="name" type="text" placeholder="Name" class="validate form-control" required />
-                                        <span class="input-focus-effect"></span>
+                        <form className="contactform" method="post" action="static/php/process-form.php">
+                            <div className="row">
+                                <div className="col-md-6">
+                                    <div className="form-group">
+                                        <input id="name" name="name" type="text" placeholder="Name" className="validate form-control" required />
+                                        <span className="input-focus-effect"></span>
                                     </div>
                                 </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <input id="email" type="email" placeholder="Email" name="email" class="validate form-control" required />
-                                        <span class="input-focus-effect"></span>
+                                <div className="col-md-6">
+                                    <div className="form-group">
+                                        <input id="email" type="email" placeholder="Email" name="email" className="validate form-control" required />
+                                        <span className="input-focus-effect"></span>
                                     </div>
                                 </div>
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <textarea id="message" placeholder="Your Comment" name="message" class="form-control" required></textarea>
-                                        <span class="input-focus-effect"></span>
+                                <div className="col-md-12">
+                                    <div className="form-group">
+                                        <textarea id="message" placeholder="Your Comment" name="message" className="form-control" required></textarea>
+                                        <span className="input-focus-effect"></span>
                                     </div>
                                 </div>
-                                <div class="col-md-12">
-                                    <div class="send">
-                                        <button class="m-btn m-btn-theme" type="submit" name="send"> Send</button>
+                                <div className="col-md-12">
+                                    <div className="send">
+                                        <button className="m-btn m-btn-theme" type="submit" name="send"> Send</button>
                                     </div>
-                                    <span class="output_message"></span>
+                                    <span className="output_message"></span>
                                 </div>
                             </div>
                         </form>
