@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import { HashLink } from 'react-router-hash-link';
+
 import SocialNetworks from '../../containers/SocialNetworks/SocialNetworks';
 
 class Footer extends Component {
@@ -17,15 +19,18 @@ class Footer extends Component {
                     links: [
                         {
                             text: 'What is Arly?',
-                            link: '/'
+                            link: '#homea',
+                            externalLink: false
                         },
                         {
                             text: 'Price',
-                            link: '/#price'
+                            link: '#price',
+                            externalLink: false
                         },
                         {
                             text: 'F.A.Q.',
-                            link: '/faq'
+                            link: '/faq',
+                            externalLink: false
                         },
                     ]
                 },
@@ -35,19 +40,23 @@ class Footer extends Component {
                     links: [
                         {
                             text: 'About',
-                            link: '/about'
+                            link: '/about',
+                            externalLink: false
                         },
                         {
                             text: 'Blog',
-                            link: 'https://medium.com/arly-stores'
+                            link: 'https://medium.com/arly-stores',
+                            externalLink: true
                         },
                         {
                             text: 'Press',
-                            link: '#'
+                            link: '#',
+                            externalLink: false
                         },
                         {
                             text: 'Policy',
-                            link: '/privacy-policy'
+                            link: '/privacy-policy',
+                            externalLink: false
                         },
                     ]
                 }
@@ -67,7 +76,13 @@ class Footer extends Component {
                     <ul className="fot-link">
                         {column.links.map((link, linkIndex) => {
                             return (
-                                <li key={linkIndex}><a href={link.link}>{link.text}</a></li>        
+                                <li key={linkIndex}>
+                                    {link.externalLink ? (
+                                        <a href={link.link} target="_blank">{link.text}</a>
+                                    ) : (
+                                        <HashLink to={link.link}>{link.text}</HashLink>
+                                    )}
+                                </li>        
                             )
                         })}
                     </ul>
