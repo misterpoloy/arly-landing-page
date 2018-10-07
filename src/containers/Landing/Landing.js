@@ -11,6 +11,7 @@ import Footer from '../../components/Footer/Footer';
 // pages imports
 import Home from './Home/Home';
 import Faqs from './Faqs/Faqs';
+import About from './About/About';
 
 class Landing extends Component {
     constructor(props) {
@@ -28,6 +29,9 @@ class Landing extends Component {
                 title: "FAQ's",
                 background: 'backgrounds/faqs-background.jpg',
                 banner: ""
+            },
+            aboutPageHeader: {
+                title: "About Us"
             }
         }
     }
@@ -54,6 +58,16 @@ class Landing extends Component {
                             <div>
                                 <Header isHome={false} headerInfo={this.state.faqPageHeader} />
                                 <Faqs />
+                            </div>
+                        } 
+                    />
+                    <Route 
+                        path="/about" 
+                        exact 
+                        render={() => 
+                            <div>
+                                <Header isHome={false} headerInfo={this.state.aboutPageHeader} />
+                                <About />
                             </div>
                         } 
                     />
