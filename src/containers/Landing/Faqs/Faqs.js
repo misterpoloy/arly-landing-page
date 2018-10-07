@@ -10,7 +10,7 @@ class Faqs extends Component {
                 {
                     number: "1",
                     question: "For what platforms can we have a bot?",
-                    answer: "You can choose different platforms in which they are"
+                    answer: "<p>You can choose different platforms in which they are </p> <ul> <li>Kik</li> <li>Skype</li> <li>SMS</li> <li>Telegram</li> <li>MS Teams</li> <li>Email</li> <li>Intercom</li> <li>FB Messwenger</li> <li>Slack</li> <li>Telegram</li> </ul>"
                 },
                 {
                     number: "2",
@@ -20,12 +20,12 @@ class Faqs extends Component {
                 {
                     number: "3",
                     question: "What forms of payments do you accept?",
-                    answer: "We accept all forms of payments."
+                    answer: "<p>We accept all forms of payments.</p> <ul> <li>Credit Cards / Debit Visa / Mastercard</li> <li>Paypal</li> <li>Money Virtual</li> </ul>"
                 },
                 {
                     number: "4",
                     question: "How they protect my data and those of my clients?",
-                    answer: "Arly handles rigorous privacy policies that are linked to international policy standards that guarantee the protection of our customers' data and in no way will the data provided be leaked or have any type of problem with data leakage. Within our security measures we can highlight:"
+                    answer: "<p>Arly handles rigorous privacy policies that are linked to international policy standards that guarantee the protection of our customers' data and in no way will the data provided be leaked or have any type of problem with data leakage.</p> <p>Within our security measures we can highlight:</p> <ul> <li>Auditing and logging</li> <li>Data encryption</li> <li>Identity and Access Management</li> <li>Network Security</li> </ul>"
                 },
                 {
                     number: "5",
@@ -50,7 +50,7 @@ class Faqs extends Component {
                 {
                     number: "9",
                     question: "What is a daily interaction?",
-                    answer: "How many different customers talks to you company each day."
+                    answer: "<p>How many <strong>different</strong> customers talks to you company each day.</p>"
                 },
             ]
         }

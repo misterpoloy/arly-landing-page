@@ -14,7 +14,7 @@ const faq = (props) => {
             </div>
             <div id={id} className="collapse" aria-labelledby={labelledby} data-parent="#accordion">
                 <div className="faq-body">
-                    <p>{props.answer}</p>
+                    <div dangerouslySetInnerHTML={{ __html: props.answer }} />
                 </div>
             </div>
         </div>
