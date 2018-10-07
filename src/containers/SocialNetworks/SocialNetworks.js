@@ -36,7 +36,7 @@ class SocialNetworks extends Component {
         })
 
         return (
-            <ul class="social-icons">
+            <ul className="social-icons">
                 {networks}
             </ul>
         )

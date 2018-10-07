@@ -2,7 +2,7 @@ import React from 'react';
 
 const social = (props) => {
     return (
-        <li><a class={props.name} href={props.link}><i class={props.icon}></i></a></li>
+        <li><a className={props.name} href={props.link}><i className={props.icon}></i></a></li>
     )
 }
 

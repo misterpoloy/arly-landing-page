@@ -61,10 +61,10 @@ class Footer extends Component {
 
         const footerColumns = this.state.columns.map((column, columIndex) => {
             return (
-                <div key={columIndex} class="col-6 col-md-3 col-lg-2 sm-m-15px-tb">
-                    <h4 class="font-alt">{column.columnTitle}</h4>
+                <div key={columIndex} className="col-6 col-md-3 col-lg-2 sm-m-15px-tb">
+                    <h4 className="font-alt">{column.columnTitle}</h4>
                     
-                    <ul class="fot-link">
+                    <ul className="fot-link">
                         {column.links.map((link, linkIndex) => {
                             return (
                                 <li key={linkIndex}><a href={link.link}>{link.text}</a></li>        
@@ -76,19 +76,19 @@ class Footer extends Component {
         })
 
         return (
-            <footer class="footer theme-bg">
-                <section class="footer-section">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-3 col-lg-5 sm-m-15px-tb">
+            <footer className="footer theme-bg">
+                <section className="footer-section">
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-md-3 col-lg-5 sm-m-15px-tb">
                                 <img src={logo} width="150" title="Arly Stores" alt="Arly Stores" />
                                 <br /><br />
                             </div>
                 
                             {footerColumns}
                 
-                            <div class="col-md-3 col-lg-3 sm-m-15px-tb">
-                                <h4 class="font-alt">Get in touch</h4>
+                            <div className="col-md-3 col-lg-3 sm-m-15px-tb">
+                                <h4 className="font-alt">Get in touch</h4>
                                 <p>{this.state.addres}</p>
                                 <p><span>E-Mail:</span> {this.state.email} </p>
                                 <SocialNetworks />
@@ -96,9 +96,9 @@ class Footer extends Component {
                 
                         </div>
                         
-                        <div class="footer-copy">
-                            <div class="row">
-                                <div class="col-12">
+                        <div className="footer-copy">
+                            <div className="row">
+                                <div className="col-12">
                                     <p>© {year} Arly Stores. All Rights Reserved.</p>
                                 </div>
                             </div>

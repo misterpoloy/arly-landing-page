@@ -68,11 +68,11 @@ class Faqs extends Component {
             })
         
         return (
-            <section class="section gray-bg">
-                <div class="container">
-                    <div class="row justify-content-center">
-                        <div class="col-md-10">
-                            <div class="faq-box" id="accordion">
+            <section className="section gray-bg">
+                <div className="container">
+                    <div className="row justify-content-center">
+                        <div className="col-md-10">
+                            <div className="faq-box" id="accordion">
                                 {faqs}
                             </div>
                         </div>
