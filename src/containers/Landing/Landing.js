@@ -12,6 +12,7 @@ import Footer from '../../components/Footer/Footer';
 import Home from './Home/Home';
 import Faqs from './Faqs/Faqs';
 import About from './About/About';
+import PrivacyPolicy from './PrivacyPolicy/PrivacyPolicy';
 
 class Landing extends Component {
     constructor(props) {
@@ -31,7 +32,12 @@ class Landing extends Component {
                 banner: ""
             },
             aboutPageHeader: {
-                title: "About Us"
+                title: "About Us",
+                background: 'banners/banner4.svg'
+            },
+            privacyPageHeader: {
+                title: "Privacy Policy",
+                background: 'backgrounds/faqs-background.jpg'
             }
         }
     }
@@ -68,6 +74,16 @@ class Landing extends Component {
                             <div>
                                 <Header isHome={false} headerInfo={this.state.aboutPageHeader} />
                                 <About />
+                            </div>
+                        } 
+                    />
+                    <Route 
+                        path="/privacy-policy" 
+                        exact 
+                        render={() => 
+                            <div>
+                                <Header isHome={false} headerInfo={this.state.privacyPageHeader} />
+                                <PrivacyPolicy />
                             </div>
                         } 
                     />
