@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { BrowserRouter } from 'react-router-dom';
 
 import Landing from './Landing/Landing';
 
@@ -24,9 +25,11 @@ class App extends Component {
         }
 
         return (
-            <div className="App">
-                <Landing />
-            </div>
+            <BrowserRouter>
+                <div className="App">
+                    <Landing />
+                </div>
+            </BrowserRouter>
         );
     }
 }
