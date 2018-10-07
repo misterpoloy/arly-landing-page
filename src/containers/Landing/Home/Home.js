@@ -273,6 +273,7 @@ class Home extends Component {
         // get pricing
         const prices = this.state.pricing.map((price, index) => {
             return <Price 
+                        key={index}
                         plan={price.plan}
                         price={price.price}
                         currency={price.currency}
