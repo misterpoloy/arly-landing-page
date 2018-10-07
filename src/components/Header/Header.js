@@ -1,8 +1,8 @@
 import React from 'react';
 
 const header = (props) => {
-    const backgroundImage = require('../../assets/img/' + props.headerInfo.background);
-    const bannerImage = require('../../assets/img/' + props.headerInfo.banner);
+    const backgroundImage = props.headerInfo.background ? require('../../assets/img/' + props.headerInfo.background) : '';
+    const bannerImage = props.headerInfo.banner ? require('../../assets/img/' + props.headerInfo.banner) : null;
 
     // styles applied to header background
     const styles = {
