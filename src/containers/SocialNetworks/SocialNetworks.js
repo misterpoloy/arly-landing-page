@@ -29,6 +29,7 @@ class SocialNetworks extends Component {
     render() {
         const networks =  this.state.networks.map((network, index) => {
             return <SocialNetwork 
+                        key={index}
                         name={network.name}
                         link={network.link}
                         icon={network.icon}
