@@ -14,20 +14,20 @@ class About extends Component {
     render() {
         const mediaPortrait = require('../../../assets/img/' + this.state.mediaPortrait);
         return (
-            <section class="section">
-                <div class="container">
-                    <div class="row align-items-center">
-                        <div class="col-lg-6">
-                            <div class="feature-box-03 md-m-30px-b">
-                                <h4 class="font-alt">{this.state.pageTitle}</h4>
+            <section className="section">
+                <div className="container">
+                    <div className="row align-items-center">
+                        <div className="col-lg-6">
+                            <div className="feature-box-03 md-m-30px-b">
+                                <h4 className="font-alt">{this.state.pageTitle}</h4>
                                 <div dangerouslySetInnerHTML={{ __html: this.state.pageContent }} />
                             </div>
                         </div>
-                        <div class="col-lg-6">
-                            <div class="video-box">
-                                <a class="popup-video" href="https://www.youtube.com/watch?v=zQrzV6GNLAE">
+                        <div className="col-lg-6">
+                            <div className="video-box">
+                                <a className="popup-video" href="https://www.youtube.com/watch?v=zQrzV6GNLAE">
                                     <img src={mediaPortrait} title="" alt="" />
-                                    <i class="icon ti-control-play"></i>
+                                    <i className="icon ti-control-play"></i>
                                 </a>
                             </div>
                         </div>
