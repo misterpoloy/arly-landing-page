@@ -8,7 +8,7 @@ const advantage = (props) => {
             <i className="ti-control-forward"></i><h5 className="features-bullet">{props.advantageInfo.title}</h5>
             <p>{props.advantageInfo.description}</p>
             {props.advantageInfo.image !== '' ? (
-                <img src={imageUrl} width="200px" />
+                <img src={imageUrl} width="200px" alt="" title="" />
             ): null}
         </li>
     );
