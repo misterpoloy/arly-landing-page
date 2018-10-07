@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import { Route } from 'react-router';
+
 // global components imports
 import Navigation from '../../components/Navigation/Navigation';
 import Header from '../../components/Header/Header';
@@ -8,6 +10,7 @@ import Footer from '../../components/Footer/Footer';
 
 // pages imports
 import Home from './Home/Home';
+import Faqs from './Faqs/Faqs';
 
 class Landing extends Component {
     constructor(props) {
@@ -20,6 +23,11 @@ class Landing extends Component {
                 banner: "banners/banner1.png",
                 buttonLink: '#price',
                 buttonText: 'Limited Availability'
+            },
+            faqPageHeader: {
+                title: "FAQ's",
+                background: 'backgrounds/faqs-background.jpg',
+                banner: ""
             }
         }
     }
@@ -29,8 +37,26 @@ class Landing extends Component {
             <div className="Landing">
                 <Navigation />
                 <Main>
-                    <Header isHome={true} headerInfo={this.state.headerInfo} />
-                    <Home />
+                    <Route 
+                        path="/" 
+                        exact
+                        render={() => 
+                            <div>
+                                <Header isHome={true} headerInfo={this.state.headerInfo} />
+                                <Home />
+                            </div>
+                        }   
+                    />
+                    <Route 
+                        path="/faq" 
+                        exact 
+                        render={() => 
+                            <div>
+                                <Header isHome={false} headerInfo={this.state.faqPageHeader} />
+                                <Faqs />
+                            </div>
+                        } 
+                    />
                 </Main>
                 <Footer />
             </div>
