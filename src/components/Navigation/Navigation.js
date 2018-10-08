@@ -75,7 +75,7 @@ class Navigation extends Component {
                                 <li><NavLink className="nav-link" activeClassName="active" scroll={this.scrollingBehavior} to="/#features">Features</NavLink></li>
                                 <li><NavLink className="nav-link" activeClassName="active" scroll={this.scrollingBehavior} to="/#howto">How to start?</NavLink></li>
                                 <li><NavLink className="nav-link" activeClassName="active" scroll={this.scrollingBehavior} to="/#price">Prices</NavLink></li>
-                                <li><Link className="nav-link" to="/faq">Faq</Link></li>
+                                <li><NavLink className="nav-link" to="/faq">Faq</NavLink></li>
                             </ul>
                         </div>
                 
