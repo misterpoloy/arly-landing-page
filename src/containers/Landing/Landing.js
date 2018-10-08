@@ -14,6 +14,8 @@ import Faqs from './Faqs/Faqs';
 import About from './About/About';
 import PrivacyPolicy from './PrivacyPolicy/PrivacyPolicy';
 
+import './Landing.css';
+
 class Landing extends Component {
     constructor(props) {
         super(props);

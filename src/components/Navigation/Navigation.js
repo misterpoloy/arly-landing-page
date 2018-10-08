@@ -1,9 +1,7 @@
 import React, { Component } from 'react';
 
 import { Link } from 'react-router-dom';
-import { HashLink } from 'react-router-hash-link';
-// import { Scroll, Element , Events, animateScroll as scroll, scrollSpy, scroller } from 'react-scroll'
-
+import { NavHashLink as NavLink } from 'react-router-hash-link';
 
 // images
 import logo from '../../assets/img/logos/arly_logo_white.png';
@@ -33,6 +31,13 @@ class Navigation extends Component {
         const prevState = {...this.state};
         this.setState({
             navbarOpen: !prevState.navbarOpen
+        })
+    }
+
+    scrollingBehavior = (el) => {
+        el.scrollIntoView({
+            behavior: 'smooth', 
+            block: 'start'
         })
     }
 
@@ -66,10 +71,10 @@ class Navigation extends Component {
                 
                         <div ref={this.navbar} className={navbarClass} id="navbar">
                             <ul className="navbar-nav">
-                                <li><HashLink className="nav-link" to="/#homea">What is Arly?</HashLink></li>
-                                <li><HashLink className="nav-link" to="/#features">Features</HashLink></li>
-                                <li><HashLink className="nav-link" to="/#howto">How to start?</HashLink></li>
-                                <li><HashLink className="nav-link" to="/#price">Prices</HashLink></li>
+                                <li><NavLink className="nav-link" activeClassName="active" scroll={this.scrollingBehavior} to="/#homea">What is Arly?</NavLink></li>
+                                <li><NavLink className="nav-link" activeClassName="active" scroll={this.scrollingBehavior} to="/#features">Features</NavLink></li>
+                                <li><NavLink className="nav-link" activeClassName="active" scroll={this.scrollingBehavior} to="/#howto">How to start?</NavLink></li>
+                                <li><NavLink className="nav-link" activeClassName="active" scroll={this.scrollingBehavior} to="/#price">Prices</NavLink></li>
                                 <li><Link className="nav-link" to="/faq">Faq</Link></li>
                             </ul>
                         </div>
